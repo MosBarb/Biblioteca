@@ -24,5 +24,24 @@ namespace BibliotecaScuoleMedie
         {
             InitializeComponent();
         }
+
+        private void btnCreaLibro_Click(object sender, RoutedEventArgs e)
+        {
+            libro titolo = txtAutore.Text;
+            libro pagine = txtPagine.Text;
+            libro autore = txtAutore.Text;
+
+           biblioteca List<libro> libri = new List<libro> ;
+
+            libri.Add.Items(titolo, pagine, autore); 
+            listLibri = libri
+        }
+
+        private void btnLettura_Click(object sender, RoutedEventArgs e)
+        {
+          libro int libroTempo = txtLibroTempo.ToString();
+
+           txtTempo.Text = readingTime(libroTempo);
+        }
     }
 }

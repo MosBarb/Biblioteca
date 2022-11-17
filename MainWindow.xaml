@@ -7,10 +7,26 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button Content="Button" HorizontalAlignment="Left" Height="28" Margin="399,101,0,0" VerticalAlignment="Top" Width="45"/>
-        <TextBox HorizontalAlignment="Left" Height="22" Margin="292,54,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="67" TextChanged="TextBox_TextChanged"/>
-        <TextBox HorizontalAlignment="Left" Height="22" Margin="388,54,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="67" RenderTransformOrigin="0.498,0.503"/>
-        <TextBox HorizontalAlignment="Left" Height="22" Margin="493,54,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="67"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="369*"/>
+            <ColumnDefinition Width="116*"/>
+            <ColumnDefinition Width="315*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="51*"/>
+            <RowDefinition Height="49*"/>
+            <RowDefinition Height="334*"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="btnCreaLibro" Content="Crea Libro" HorizontalAlignment="Left" Height="28" Margin="5,10,0,0" VerticalAlignment="Top" Width="101" Grid.Row="2" Grid.Column="1" Click="btnCreaLibro_Click"/>
+        <TextBox x:Name="txtTitolo" HorizontalAlignment="Left" Height="22" Margin="292,0,0,0" TextWrapping="Wrap" Text="titolo" VerticalAlignment="Center" Width="67" TextChanged="TextBox_TextChanged" Grid.Row="1"/>
+        <TextBox x:Name="txtPagine" HorizontalAlignment="Left" Height="22" Margin="19,0,0,0" TextWrapping="Wrap" Text="pagine" VerticalAlignment="Center" Width="67" RenderTransformOrigin="0.498,0.503" TextChanged="TextBox_TextChanged" Grid.Row="1" Grid.Column="1"/>
+        <TextBox x:Name="txtAutore" HorizontalAlignment="Left" Height="22" Margin="23,0,0,0" TextWrapping="Wrap" Text="autore" VerticalAlignment="Center" Width="67" Grid.Row="1" Grid.Column="2"/>
+        <Label Content="inserire nelle rispettive caselle i dati" HorizontalAlignment="Center" Height="23" VerticalAlignment="Center" Width="296" Grid.Column="2" RenderTransformOrigin="0.51,0.594"/>
+        <ListBox x:Name="listLibri" HorizontalAlignment="Left" Height="218" Margin="31,24,0,0" Grid.Row="2" VerticalAlignment="Top" Width="328" d:ItemsSource="{d:SampleData ItemCount=5}"/>
+        <Button x:Name="btnLettura" Grid.Column="2" Content="tempo lettura" HorizontalAlignment="Left" Height="32" Margin="15,96,0,0" Grid.Row="2" VerticalAlignment="Top" Width="82" Click="btnLettura_Click"/>
+        <TextBox x:Name="txtTempo" Grid.Column="2" HorizontalAlignment="Left" Height="32" Margin="133,96,0,0" Grid.Row="2" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="130"/>
+        <Label Grid.Column="2" Content="tempo di lettura, inserire numero pagine&#xD;&#xA;" HorizontalAlignment="Left" Height="27" Margin="9,11,0,0" Grid.Row="2" VerticalAlignment="Top" Width="279"/>
+        <TextBox x:Name="txtLibroTempo" Grid.Column="2" HorizontalAlignment="Left" Height="27" Margin="15,43,0,0" Grid.Row="2" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="154"/>
 
     </Grid>
 </Window>
