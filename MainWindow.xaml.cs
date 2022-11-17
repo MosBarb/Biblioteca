@@ -41,7 +41,7 @@ namespace BibliotecaScuoleMedie
         {
           libro int libroTempo = txtLibroTempo.ToString();
 
-           txtTempo.Text = readingTime(libroTempo);
+           txtTempo.Text = readingTime(libroTempo);  //commento
         }
     }
 }
