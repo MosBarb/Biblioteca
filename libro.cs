@@ -26,7 +26,24 @@ namespace BibliotecaScuoleMedie
             return string;
         }
 
-       
+        static string ReadingTime(int pagine)
+        {
+            string tempo = "";
+            if (pagine < 100)
+            {
+                return tempo = "1h";
+            }
+
+            if (pagine > 100 || pagine < 200)
+            {
+                return tempo = "2h";
+            }
+
+            if (pagine > 200)
+            {
+                return tempo = "4h";
+            }
+        }
     }
 
     
